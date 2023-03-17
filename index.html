@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA API Pictures</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
+    <!-- ZTM Favicon -->
+    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="rocket-1.svg" alt="Rocket loading animation" />
+    </div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Results nav -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favorites')">Favourites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;⚫&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNasaimages()">Load More</h3>
+        </span>
+
+        <span class="navigation-items hidden" id="favouritesNav">
+          <h3 class="clickable" onclick="getNasaimages()">
+            Load more Nasa Images
+          </h3>
+        </span>
+      </div>
+
+      <!-- images -->
+      <div class="images-container">
+        <!-- <div class="card">
+          <a href="" title="View Full Image">
+            <img
+              src="https://apod.nasa.gov/apod/image/2303/JupiterVenus_Luy_5496.jpg"
+              alt="Nasa picture of the day"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Title of image</h5>
+            <p class="clickable">Add to favourites</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
+              cum quidem nihil optio vero minus, neque natus provident ratione
+              in, eum laborum quo sequi numquam iure debitis vel nobis
+              accusantium. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Sit quisquam dolorum perspiciatis laborum vel esse quibusdam
+              temporibus nesciunt assumenda, incidunt ratione nobis, corrupti
+              maxime cumque, doloribus tempora. Dignissimos, saepe. Veritatis.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, odit nobis temporibus molestiae sunt reprehenderit qui
+              tempore ut corporis officia veritatis illo harum sapiente quidem
+              earum reiciendis voluptates blanditiis optio.
+            </p>
+            <small class="text-muted">
+              <strong>3-15-2023</strong>
+            </small>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <div class="save-confirmed" hidden>
+      <h1>ADDED!</h1>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
